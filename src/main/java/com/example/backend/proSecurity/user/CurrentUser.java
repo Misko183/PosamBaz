@@ -4,8 +4,12 @@ package com.example.backend.proSecurity.user;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -32,7 +36,9 @@ public class CurrentUser implements UserDetails {
     }
 
     public void setAuthority(String authority) {
-        this.authorities = List.of(new SimpleGrantedAuthority(authority));
+//        this.authorities = List.of(new SimpleGrantedAuthority(authority));
+        List<GrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority(authority));
+
     }
 
     public void setEnabled(boolean enabled) {
