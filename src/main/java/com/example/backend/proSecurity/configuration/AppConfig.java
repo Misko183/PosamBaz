@@ -85,7 +85,7 @@ public class AppConfig extends WebSecurityConfigurerAdapter {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:4200")
+                        .allowedOrigins("https://posam-baz-fe.vercel.app")
                         .allowedMethods("*")
                         .allowCredentials(true);
             }
