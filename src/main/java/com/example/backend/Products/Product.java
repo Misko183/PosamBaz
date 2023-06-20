@@ -26,7 +26,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @Column(name = "description", length = 23680)
+    @Column(name = "description", columnDefinition = "text")
     private String description;
     private String price;
     private String localization;
