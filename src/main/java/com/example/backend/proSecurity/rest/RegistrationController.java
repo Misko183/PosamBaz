@@ -28,6 +28,7 @@ public void userRegister(@RequestBody UserEntity user) {
     userEntity.setAddress(user.getAddress());
     userEntity.setPhone(user.getPhone());
     userEntity.setEmail(user.getEmail());
+    userEntity.setEnabled(true);
 
     repository.save(userEntity);
 }
